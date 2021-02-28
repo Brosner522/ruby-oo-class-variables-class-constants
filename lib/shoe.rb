@@ -1,9 +1,18 @@
+require 'pry'
 class Shoe
+
   attr_accessor :color, :size, :material, :condition
   attr_reader :brand
 
+  BRANDS = [] 
+
   def initialize(brand)
     @brand = brand
+    #if self.include?.uniq (brand) 
+    BRANDS << brand if not BRANDS.include? (brand)
+    #binding.pry 
+    #if BRANDS.include? (brand)
+    #end 
   end
 
   def cobble
